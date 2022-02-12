@@ -13,7 +13,10 @@
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
   },
   "lint-staged": {
-    "**/*": "run-s lint format"
+    "src/**/*.{js,jsx,ts,tsx,json,css}": [
+      "eslint \"src/**/*.{js,jsx}\" --quiet",
+      "prettier --write \"src/**/*.{js,jsx}\""
+    ]
   },
   "repository": {
     "type": "git",
