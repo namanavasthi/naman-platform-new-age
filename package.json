@@ -2,7 +2,19 @@
   "name": "naman-platform-new-age",
   "version": "1.0.0",
   "description": "a bundle with latest standards for react and tailwind",
-  "main": "index.js",
+  "type": "module",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "directories": {
     "example": "example"
   },
@@ -10,7 +22,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "build": "rm -rf ./dist && microbundle-crl"
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
@@ -39,6 +52,10 @@
     "microbundle-crl": "^0.13.11",
     "npm-run-all": "^4.1.5",
     "prettier": "2.5.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "dependencies": {
     "react": "^17.0.2",
