@@ -1,5 +1,5 @@
 # Ignore artifacts:
-build
-coverage
-example
-node_modules
+build/
+dist/
+node_modules/
+example/
