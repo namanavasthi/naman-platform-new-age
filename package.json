@@ -13,7 +13,7 @@
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css}": [
+    "**/*": [
       "eslint \"src/**/*.{js,jsx}\" --quiet",
       "prettier --write \"src/**/*.{js,jsx}\""
     ]
