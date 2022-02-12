@@ -9,10 +9,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
-    "format": "prettier --write \"src/**/*.{js,jsx}\""
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
   },
   "lint-staged": {
-    "**/*": "prettier --write \"src/**/*.{js,jsx}\" --ignore-unknown"
+    "**/*": "run-s lint format"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,8 @@
   },
   "homepage": "https://github.com/namanavasthi/naman-platform-new-age#readme",
   "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.3",
     "microbundle-crl": "^0.13.11",
