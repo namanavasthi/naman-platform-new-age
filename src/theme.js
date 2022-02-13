@@ -1,1 +1,5 @@
-export const obj = { a: "naman" };
+module.exports = {
+  colors: {
+    ocean: "#009cdc",
+  },
+};
