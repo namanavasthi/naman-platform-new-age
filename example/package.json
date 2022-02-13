@@ -1,0 +1,16 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "source": "index.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "microbundle-crl"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "microbundle-crl": "^0.13.11"
+  }
+}

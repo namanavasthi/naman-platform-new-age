@@ -2,11 +2,10 @@
   "name": "naman-platform-new-age",
   "version": "1.0.0",
   "description": "a bundle with latest standards for react and tailwind",
-  "type": "module",
-  "source": "src/index.js",
+  "source": ["src/index.js","src/theme.js"],
   "main": "dist/index.js",
   "module": "dist/index.module.js",
-  "unpkg": "dist/index.umd.js",
+  "unpkg": "./dist/index.umd.js",
   "engines": {
     "node": ">=8",
     "npm": ">=5"
@@ -23,7 +22,7 @@
     "prepare": "husky install",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-    "build": "rm -rf ./dist && microbundle-crl"
+    "build": "rm -rf ./dist && microbundle"
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
@@ -43,15 +42,18 @@
   },
   "homepage": "https://github.com/namanavasthi/naman-platform-new-age#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.2",
     "eslint": "^8.9.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.3",
-    "microbundle-crl": "^0.13.11",
+    "microbundle": "^0.14.2",
     "npm-run-all": "^4.1.5",
-    "prettier": "2.5.1"
+    "postcss": "^8.4.6",
+    "prettier": "2.5.1",
+    "tailwindcss": "^3.0.22"
   },
   "peerDependencies": {
     "react": "^17.0.2",
