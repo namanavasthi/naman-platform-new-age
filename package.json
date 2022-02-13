@@ -2,7 +2,10 @@
   "name": "naman-platform-new-age",
   "version": "1.0.1",
   "description": "a bundle with latest standards for react and tailwind",
-  "source": ["src/index.js","src/theme.js"],
+  "source": [
+    "src/index.js",
+    "src/theme.js"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.module.js",
   "unpkg": "./dist/index.umd.js",
@@ -42,6 +45,7 @@
   },
   "homepage": "https://github.com/namanavasthi/naman-platform-new-age#readme",
   "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.16.7",
     "autoprefixer": "^10.4.2",
     "eslint": "^8.9.0",
     "eslint-config-prettier": "^8.3.0",
